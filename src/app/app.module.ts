@@ -9,13 +9,15 @@ import { LoginComponent } from './login/login.component';
 import { FavoriteAccountsComponent } from './favorite-accounts/favorite-accounts.component';
 import { AddEditAccountComponent } from './add-edit-account/add-edit-account.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     FavoriteAccountsComponent,
-    AddEditAccountComponent
+    AddEditAccountComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

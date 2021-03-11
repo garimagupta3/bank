@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-md-6 offset-md-3 content border p-5 bg-light">
-                <h1 *ngIf="isAddMode">Add favorite account</h1>
-                <h1 *ngIf="!isAddMode">Edit favorite account</h1>
+                <h4 *ngIf="isAddMode">Add favorite account</h4>
+                <h4 *ngIf="!isAddMode">Edit favorite account</h4>
                 <hr/>
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <div class="form-row">
