@@ -7,10 +7,10 @@ import { tap} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CommonService {
+  constructor(private http: HttpClient) { }
 
   isSignUp = new BehaviorSubject(null);
 
-  constructor(private http: HttpClient) { }
 
   baseUrl= 'http://localhost:3000' ;
 
@@ -27,4 +27,11 @@ export class CommonService {
 
 
 
+  addAccount(data: any) {
+    return this.http.post(`${this.baseUrl}/favoriteAccounts`, data);
+  }
+
+  getAllBankDetails() {
+    return this.http.get(`${this.baseUrl}/bankAccounts`);
+  }
 }

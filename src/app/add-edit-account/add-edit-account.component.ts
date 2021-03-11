@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonService } from './../common.service';
 
 @Component({
   selector: 'app-add-edit-account',
@@ -9,15 +10,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AddEditAccountComponent implements OnInit {
   form: FormGroup;
   submitted: Boolean = false;
+  bankName: string;
+  accounts: any = [];
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private commonService: CommonService) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       accountName: ['', Validators.required],
-      accountNumber: ['', [Validators.required, Validators.maxLength(6)]]
-      // bank: ['', Validators.required]
-    })
+      accountNumber: ['', [Validators.required, Validators.maxLength(20)]],
+      bank: ['']
+    });
   }
 
   // convenience getter for easy access to form fields
@@ -36,8 +39,22 @@ export class AddEditAccountComponent implements OnInit {
   }
 
   addAccount() {
+    this.commonService.addAccount(this.form.value).subscribe(() => {
+      alert("Account added to favorites");
+    })
+  }
 
-    console.log("account added")
-    console.log(this.form.value);
+  addBankName({ target }) {
+    let accNumber = target.value;
+    let bankCode = accNumber.slice(4, 8);
+    this.commonService.getAllBankDetails().subscribe(data => {
+      this.accounts = data;
+      let currentBankCode = this.accounts.filter(bankdata => bankdata.bankCode == bankCode);
+      if (currentBankCode.length) {
+        this.f.bank.setValue(currentBankCode[0].bankName);
+      } else {
+        alert('Bank does not exist, please provide valid account details');
+      }
+    })
   }
 }
