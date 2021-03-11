@@ -35,8 +35,11 @@
                         </div>
                     </div>
                     <div class="form-group text-center">
-                        <button class="btn btn-primary">
+                        <button class="btn btn-primary mx-2">
                             Save
+                        </button>
+                        <button *ngIf="!isAddMode" class="btn btn-primary" (click)="deleteAccount($event)">
+                            Delete
                         </button>
                         <a routerLink="/favorite-accounts" class="btn btn-link">Cancel</a>
                     </div>
