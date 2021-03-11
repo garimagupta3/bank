@@ -7,18 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FavoriteAccountsComponent } from './favorite-accounts/favorite-accounts.component';
+import { AddEditAccountComponent } from './add-edit-account/add-edit-account.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    FavoriteAccountsComponent
+    FavoriteAccountsComponent,
+    AddEditAccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

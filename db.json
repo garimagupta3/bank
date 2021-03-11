@@ -10,6 +10,30 @@
         {
             "bankCode": 1236,
             "bankName": "Moscow Bank"
+        },
+        {
+            "bankCode": 444,
+            "bankName": "Yes Bank"
+        },
+        {
+            "bankCode": 555,
+            "bankName": "Metro Bank"
+        },
+        {
+            "bankCode": 666,
+            "bankName": "Uco Bank"
+        },
+        {
+            "bankCode": 235235,
+            "bankName": "ABC Bank"
+        },
+        {
+            "bankCode": 3242,
+            "bankName": "Max Bank"
+        },
+        {
+            "bankCode": 4563522,
+            "bankName": "Dena Bank"
         }
     ],
     "customers": [
@@ -23,5 +47,9 @@
             "customerName": "Arturito",
             "password": "art008"
         }
-    ]
+    ],
+    "favoriteAccounts": [{
+        "accountName": "",
+        "accountNumber": ""
+    }]
 }

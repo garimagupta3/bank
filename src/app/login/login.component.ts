@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   loading = false;
     submitted = false;
+    isValidUser = false;
 
   constructor(
          private formBuilder: FormBuilder,
@@ -53,6 +54,7 @@ onSubmit() {
         
     },
     error => {
+      this.isValidUser =false;
       this.loading = false;
     });
       

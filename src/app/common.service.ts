@@ -18,6 +18,10 @@ export class CommonService {
     return this.http.get(`${this.baseUrl}/customers`);
   }
 
+  getBankDetails(){
+    return this.http.get(`${this.baseUrl}/bankAccounts`);
+  }
+
 
 
 
