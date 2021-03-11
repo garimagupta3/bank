@@ -9,7 +9,10 @@ import { tap} from 'rxjs/operators';
 export class CommonService {
   constructor(private http: HttpClient) { }
 
-  isSignUp = new BehaviorSubject(null);
+  isSignUp = new BehaviorSubject(false);
+  public get isAuthenticated() {
+    return this.isSignUp.value;
+}
 
 
   baseUrl= 'http://localhost:3000' ;
