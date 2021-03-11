@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CommonService } from './../common.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,7 @@ export class FavoriteAccountsComponent implements OnInit {
   bankList;
   config: any;
   collection = { count: 10, data: [] };
-  constructor(private commonService: CommonService) { 
+  constructor(private commonService: CommonService, private router: Router) { 
 
 
     this.config = {
@@ -39,6 +40,12 @@ export class FavoriteAccountsComponent implements OnInit {
     error => {
 
     });
+  }
+  
+
+  //Edit Account 
+   editAccount(id:number){
+    this.router.navigate(['/edit-account', id]);
   }
 
 

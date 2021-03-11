@@ -12,8 +12,8 @@ import { first } from 'rxjs/operators';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   loading = false;
-    submitted = false;
-    isValidUser = false;
+  submitted = false;
+  isValidUser = false;
 
   constructor(
          private formBuilder: FormBuilder,

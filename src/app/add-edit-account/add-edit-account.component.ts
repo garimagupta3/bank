@@ -31,6 +31,9 @@ export class AddEditAccountComponent implements OnInit {
       bank: ['']
     });
 
+    //pass the param id
+ 
+
     //autofill edit mode enteries
     if (!this.isAddMode) {
       this.commonService.getAccountById(this.id).subscribe(x => {
@@ -63,6 +66,7 @@ export class AddEditAccountComponent implements OnInit {
   addAccount() {
     this.commonService.addAccount(this.form.value).subscribe(() => {
       alert("Account added to favorites!");
+      this.router.navigate(['favorite-accounts']);
     })
   }
 

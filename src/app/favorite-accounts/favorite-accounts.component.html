@@ -19,7 +19,7 @@
  <div class="middle-container">
     <div style="text-align:center">
         <h4>Favorite Accounts</h4>
-      
+        <p class="badge badge-primary badge-pill" routerLink="/add-account">Add Account</p>
         <table class="table">
           <thead>
             <tr>
@@ -32,9 +32,9 @@
           <tbody>
             <tr *ngFor="let item of bankList| paginate: config ; let i =index;">
               <td>{{i}}</td>
-              <td scope="row">{{item.bankName}}</td>
-              <td>{{item.bankCode}}</td>
-              <td><span class="badge badge-primary badge-pill">Edit</span></td>
+              <td scope="row">{{item.accountName}}</td>
+              <td>{{item.accountNumber}}</td>
+              <td (click)="editAccount(item.id)"><span class="badge badge-primary badge-pill">Edit</span></td>
             </tr>
           </tbody>
         </table>

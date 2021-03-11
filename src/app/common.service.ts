@@ -22,7 +22,7 @@ export class CommonService {
   }
 
   getBankDetails() {
-    return this.http.get(`${this.baseUrl}/bankAccounts`);
+    return this.http.get(`${this.baseUrl}/favoriteAccounts`);
   }
 
 

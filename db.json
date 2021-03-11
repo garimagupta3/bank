@@ -1,51 +1,138 @@
 {
-    "bankAccounts": [{
-            "bankCode": 1234,
-            "bankName": "Nairobi Bank"
-        },
-        {
-            "bankCode": 1235,
-            "bankName": "Denver Bank"
-        },
-        {
-            "bankCode": 1236,
-            "bankName": "Moscow Bank"
-        },
-        {
-            "bankCode": 444,
-            "bankName": "Yes Bank"
-        },
-        {
-            "bankCode": 555,
-            "bankName": "Metro Bank"
-        },
-        {
-            "bankCode": 666,
-            "bankName": "Uco Bank"
-        },
-        {
-            "bankCode": 235235,
-            "bankName": "ABC Bank"
-        },
-        {
-            "bankCode": 3242,
-            "bankName": "Max Bank"
-        },
-        {
-            "bankCode": 4563522,
-            "bankName": "Dena Bank"
-        }
-    ],
-    "customers": [{
-            "customerId": 1,
-            "customerName": "Professor",
-            "password": "prof007"
-        },
-        {
-            "customerId": 2,
-            "customerName": "Arturito",
-            "password": "art008"
-        }
-    ],
-    "favoriteAccounts": []
+  "bankAccounts": [
+    {
+      "bankCode": 1234,
+      "bankName": "Nairobi Bank"
+    },
+    {
+      "bankCode": 1235,
+      "bankName": "Denver Bank"
+    },
+    {
+      "bankCode": 1236,
+      "bankName": "Moscow Bank"
+    },
+    {
+      "bankCode": 444,
+      "bankName": "Yes Bank"
+    },
+    {
+      "bankCode": 555,
+      "bankName": "Metro Bank"
+    },
+    {
+      "bankCode": 666,
+      "bankName": "Uco Bank"
+    },
+    {
+      "bankCode": 235235,
+      "bankName": "ABC Bank"
+    },
+    {
+      "bankCode": 3242,
+      "bankName": "Max Bank"
+    },
+    {
+      "bankCode": 4563522,
+      "bankName": "Dena Bank"
+    }
+  ],
+  "customers": [
+    {
+      "customerId": 1,
+      "customerName": "Professor",
+      "password": "prof007"
+    },
+    {
+      "customerId": 2,
+      "customerName": "Arturito",
+      "password": "art008"
+    }
+  ],
+  "favoriteAccounts": [
+    {
+      "accountName": "Denver",
+      "accountNumber": "123412341235",
+      "bank": "Nairobi Bank",
+      "id": 1
+    },
+    {
+      "accountName": "UCO",
+      "accountNumber": "123412341235",
+      "bank": "Nairobi Bank",
+      "id": 2
+    },
+    {
+      "accountName": "Metro Bank",
+      "accountNumber": "123412341235",
+      "bank": "Nairobi Bank",
+      "id": 3
+    },
+    {
+      "accountName": "ABC Bank",
+      "accountNumber": "123412341235",
+      "bank": "Nairobi Bank",
+      "id": 4
+    },
+    {
+      "accountName": "YES Bank",
+      "accountNumber": "123412341235",
+      "bank": "Nairobi Bank",
+      "id": 5
+    },
+    {
+      "accountName": "XYZ Bank",
+      "accountNumber": "123412341235",
+      "bank": "Nairobi Bank",
+      "id": 7
+    },
+    {
+      "accountName": "Dena Bank",
+      "accountNumber": "123412341235",
+      "bank": "Nairobi Bank",
+      "id": 8
+    },
+    {
+      "accountName": "test",
+      "accountNumber": "2421341234",
+      "bank": "",
+      "id": 9
+    },
+    {
+      "accountName": "test",
+      "accountNumber": "2334",
+      "bank": "",
+      "id": 10
+    },
+    {
+      "accountName": "test",
+      "accountNumber": "124354546565",
+      "bank": "",
+      "id": 11
+    },
+    {
+      "accountName": "test",
+      "accountNumber": "12341234",
+      "bank": "",
+      "id": 12
+    },
+    {
+      "accountName": "test",
+      "accountNumber": "1234123412341234",
+      "bank": "Nairobi Bank",
+      "id": 13
+    },
+    {
+      "accountName": "testtest",
+      "accountNumber": "12234123",
+      "bank": "",
+      "id": 14
+    },
+    {
+      "accountName": "test",
+      "accountNumber": "12341234",
+      "bank": "",
+      "id": 15
+    }
+  ]
 }
