@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonService } from './../common.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-edit-account',
@@ -12,15 +13,33 @@ export class AddEditAccountComponent implements OnInit {
   submitted: Boolean = false;
   bankName: string;
   accounts: any = [];
+  id: string;
+  isAddMode: boolean;
+  accountDetails: any;
 
-  constructor(private formBuilder: FormBuilder, private commonService: CommonService) { }
+  constructor(private formBuilder: FormBuilder, private commonService: CommonService, private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+    this.isAddMode = !this.id;
+
+    //form validations
     this.form = this.formBuilder.group({
       accountName: ['', Validators.required],
       accountNumber: ['', [Validators.required, Validators.maxLength(20)]],
       bank: ['']
     });
+
+    //autofill edit mode enteries
+    if (!this.isAddMode) {
+      this.commonService.getAccountById(this.id).subscribe(x => {
+        this.accountDetails = x;
+        this.f.accountName.setValue(this.accountDetails.accountName);
+        this.f.accountNumber.setValue(this.accountDetails.accountNumber);
+        this.f.bank.setValue(this.accountDetails.bank);
+      });
+    }
   }
 
   // convenience getter for easy access to form fields
@@ -30,17 +49,26 @@ export class AddEditAccountComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    console.log("submitted form");
     // stop here if form is invalid
     if (this.form.invalid) {
       return;
     }
-    this.addAccount()
+    if (this.isAddMode) {
+      this.addAccount();
+    } else {
+      this.updateAccount();
+    }
   }
 
   addAccount() {
     this.commonService.addAccount(this.form.value).subscribe(() => {
-      alert("Account added to favorites");
+      alert("Account added to favorites!");
+    })
+  }
+
+  updateAccount() {
+    this.commonService.updateAccount(this.form.value, this.id).subscribe(() => {
+      alert("Account updated successfully!");
     })
   }
 

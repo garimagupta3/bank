@@ -36,8 +36,7 @@
             "bankName": "Dena Bank"
         }
     ],
-    "customers": [
-      {
+    "customers": [{
             "customerId": 1,
             "customerName": "Professor",
             "password": "prof007"
