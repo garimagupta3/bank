@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { FavoriteAccountsComponent } from './favorite-accounts/favorite-accounts.component';
 import { AddEditAccountComponent } from './add-edit-account/add-edit-account.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],

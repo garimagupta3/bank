@@ -17,7 +17,7 @@
                     <div class="form-row">
                         <div class="form-group col">
                             <label for="accountNumber">Account number</label>
-                            <input type="text" formControlName="accountNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.accountNumber.errors }" />
+                            <input type="text" formControlName="accountNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.accountNumber.errors }" (change)="addBankName($event)" />
                             <div *ngIf="submitted && f.accountNumber.errors" class="invalid-feedback">
                                 <div *ngIf="f.accountNumber.errors.required">Account number is required</div>
                                 <div *ngIf="f.accountNumber.errors.maxlength">Account number must not be more than 20 characters</div>
@@ -35,13 +35,12 @@
                     </div>
                     <div class="form-group text-center">
                         <button class="btn btn-primary">
-                    Save
-                </button>
-                        <a routerLink="/users" class="btn btn-link">Cancel</a>
+                            Save
+                        </button>
+                        <a routerLink="/" class="btn btn-link">Cancel</a>
                     </div>
                 </form>
             </div>
         </div>
-
     </div>
 </div>

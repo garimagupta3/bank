@@ -23,8 +23,5 @@
             "password": "art008"
         }
     ],
-    "favoriteAccounts": [{
-        "accountName": "",
-        "accountNumber": ""
-    }]
+    "favoriteAccounts": []
 }
