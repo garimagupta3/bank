@@ -22,11 +22,6 @@ export class CommonService {
     return this.http.get(`${this.baseUrl}/bankAccounts`);
   }
 
-
-
-
-
-
   addAccount(data: any) {
     return this.http.post(`${this.baseUrl}/favoriteAccounts`, data);
   }
@@ -42,5 +37,9 @@ export class CommonService {
   updateAccount(data: any, id: any) {
     console.log(data)
     return this.http.put(`${this.baseUrl}/favoriteAccounts/${id}`, data);
+  }
+
+  deleteAccount(id) {
+    return this.http.delete(`${this.baseUrl}/favoriteAccounts/${id}`)
   }
 }

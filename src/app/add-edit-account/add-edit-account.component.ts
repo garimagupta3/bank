@@ -72,6 +72,13 @@ export class AddEditAccountComponent implements OnInit {
     })
   }
 
+  deleteAccount() {
+    this.commonService.deleteAccount(this.id).subscribe(() => {
+      alert("Account deleted successfully!");
+      this.router.navigate(['favorite-accounts']);
+    })
+  }
+
   addBankName({ target }) {
     let accNumber = target.value;
     let bankCode = accNumber.slice(4, 8);
