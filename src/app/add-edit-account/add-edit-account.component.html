@@ -1,8 +1,9 @@
 <div class="p-4">
     <div class="container">
         <div class="row">
-            <div class="col-xs-6 col-md-6 offset-md-3 content">
-                <h1>Add favorite account</h1>
+            <div class="col-xs-6 col-md-6 offset-md-3 content border p-5 bg-light">
+                <h1 *ngIf="isAddMode">Add favorite account</h1>
+                <h1 *ngIf="!isAddMode">Edit favorite account</h1>
                 <hr/>
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <div class="form-row">
