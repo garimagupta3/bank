@@ -50,6 +50,7 @@ onSubmit() {
  
       if(isValidUser){
         this.router.navigate(['favorite-accounts']);
+        this.commonService.isSignUp.next(true);
       }
         
     },
